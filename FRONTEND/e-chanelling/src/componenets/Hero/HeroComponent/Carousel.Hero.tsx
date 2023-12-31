@@ -38,7 +38,7 @@ export function CarouselHero(): JSX.Element {
 
     return (
         <div className={` sm:h-80 md:h-[400px] lg:h-[540px] h-56`}>
-            <Carousel theme={customTheme}>
+            <Carousel slideInterval={7000} theme={customTheme}>
                 <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
                     <div className={"responsivenesss absolute"}>
                         <TextHero />
