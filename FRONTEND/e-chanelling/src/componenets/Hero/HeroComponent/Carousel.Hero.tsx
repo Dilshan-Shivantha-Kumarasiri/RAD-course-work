@@ -2,8 +2,6 @@
 import type { CustomFlowbiteTheme } from 'flowbite-react';
 import { Carousel } from 'flowbite-react';
 
-
-
 export function CarouselHero(): JSX.Element {
 
     const customTheme: CustomFlowbiteTheme['carousel'] = {
@@ -37,9 +35,8 @@ export function CarouselHero(): JSX.Element {
             }
     };
 
-
     return (
-        <div className="h-56 sm:h-80 md:h-[480px] lg:h-[580px]">
+        <div className={` sm:h-80 md:h-[400px] lg:h-[540px] h-56`}>
             <Carousel theme={customTheme}>
                 <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
                     <img src="https://usebootstrap.com/preview-no-frame/mediplus-lite/img/slider2.jpg" alt=""/>
