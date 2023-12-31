@@ -1,6 +1,7 @@
 
 import type { CustomFlowbiteTheme } from 'flowbite-react';
 import { Carousel } from 'flowbite-react';
+import TextHero from "./Text.Hero.tsx";
 
 export function CarouselHero(): JSX.Element {
 
@@ -39,12 +40,21 @@ export function CarouselHero(): JSX.Element {
         <div className={` sm:h-80 md:h-[400px] lg:h-[540px] h-56`}>
             <Carousel theme={customTheme}>
                 <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
+                    <div className={"responsivenesss absolute"}>
+                        <TextHero />
+                    </div>
                     <img src="https://usebootstrap.com/preview-no-frame/mediplus-lite/img/slider2.jpg" alt=""/>
                 </div>
                 <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
+                    <div className={"responsivenesss absolute"}>
+                        <TextHero />
+                    </div>
                     <img src="https://usebootstrap.com/preview-no-frame/mediplus-lite/img/slider.jpg" alt=""/>
                 </div>
                 <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
+                    <div className={"responsivenesss absolute"}>
+                        <TextHero />
+                    </div>
                     <img src="https://usebootstrap.com/preview-no-frame/mediplus-lite/img/slider3.jpg" alt=""/>
                 </div>
             </Carousel>
