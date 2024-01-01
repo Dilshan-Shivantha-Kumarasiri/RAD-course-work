@@ -6,7 +6,12 @@ export default {
     'node_modules/flowbite-react/lib/esm/**/*.js',
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        // 'pattern-bg': "url('https://www.echannelling.com/images/homeTile/hometile-bg.svg')",
+        // 'footer-texture': "url('/img/footer-texture.png')",
+      }
+    },
   },
   plugins: [
     'flowbite/plugin',
