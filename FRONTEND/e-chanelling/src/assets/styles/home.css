@@ -51,3 +51,8 @@
     grid-template-columns: 2fr 1fr 1fr;
     column-gap: 10px;
 }
+
+/*add svg back ground to the main search function container*/
+.main-search-function-content{
+    background-image: url("https://www.echannelling.com/images/body-bg.svg");
+}
