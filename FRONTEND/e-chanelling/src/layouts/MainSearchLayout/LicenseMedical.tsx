@@ -6,9 +6,9 @@ import GrayButton from "../../componenets/FormComponent/GrayButton.tsx";
 export default function LicenseMedical(): JSX.Element {
     return (
         <div className={"grid driving-license-search"}>
-            <Select />
-            <DatePickers />
-            <GrayButton />
+            <Select lableValue={"Branch Name"}/>
+            <DatePickers lableValue={"Date"} />
+            <GrayButton value={"search"}/>
         </div>
     );
 }

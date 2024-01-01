@@ -1,15 +1,19 @@
 import {Select, Label} from "flowbite-react";
 
+interface Props{
+    id:string
+    lableValue:string
+}
 
 
-export default function Selects(props): JSX.Element {
+
+export default function Selects(props: Props): JSX.Element {
     return (
         <div>
-            <Label htmlFor={props.id} value={props.value} />
+            <Label htmlFor={props.id} value={props.lableValue} />
             <Select  >
                 <option>Doctors</option>
-                <hr />
-                <option>USQ</option>
+                <option>Speciali</option>
             </Select>
         </div>
     );
