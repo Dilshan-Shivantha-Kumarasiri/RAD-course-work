@@ -41,3 +41,13 @@
     background-color: #1A76D1;
     transform: scaleX(1);
 }
+
+.search-input-context{
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 10px;
+}
+
+.driving-license-search{
+    grid-template-columns: 2fr 1fr 1fr;
+    column-gap: 10px;
+}

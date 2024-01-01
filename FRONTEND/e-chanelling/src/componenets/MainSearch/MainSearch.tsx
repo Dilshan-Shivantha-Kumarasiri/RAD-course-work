@@ -9,9 +9,6 @@ export default function MainSearch(): JSX.Element {
     //bg prop is background color
 
     function setColor(color:string): void{
-        // setBg(color)
-        console.log("B")
-        console.log(color)
         setBg(color)
     }
 
@@ -23,7 +20,7 @@ export default function MainSearch(): JSX.Element {
                     <SearchBtn main={"Tele-Channelling"} sub={"Video consultation"} bg="#0057a4" handleClick={(color:string) => setColor(color)} />
                     <SearchBtn main={"Driving License Medical"} sub={"Book an appointmen"} bg="#4cb847" handleClick={(color:string) =>setColor(color)} />
                 </div>
-                <SearchInputContext bg={bg} />
+                <SearchInputContext bg={bg} id={bg}/>
             </section>
         </>
     );
