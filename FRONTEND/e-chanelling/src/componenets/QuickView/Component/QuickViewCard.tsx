@@ -7,8 +7,7 @@ export default function QuickViewCard(): JSX.Element {
                 </div>
 
                 <div>
-                    <div>fdsfjsfds</div>
-
+                    {/*<div>fdsfjsfds</div>*/}
                 </div>
             </section>
         </>
