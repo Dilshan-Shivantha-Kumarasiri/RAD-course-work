@@ -10,6 +10,7 @@ export default function NavigationMenu(){
             </div>
             <div className={"flex items-center"}>
                 <ul className={"flex font-medium main-font"}>
+                    <li className={" pcr-navigation relative cursor-pointer mx-[2vw]"}><a href="#">Chat With Doctors</a></li>
                     <li className={" pcr-navigation relative cursor-pointer"}><a href="#">PCR</a></li>
                     <li className={"appointment-navigation relative mx-[2vw] cursor-pointer"}><a href="#">My Appointments</a></li>
                 </ul>
