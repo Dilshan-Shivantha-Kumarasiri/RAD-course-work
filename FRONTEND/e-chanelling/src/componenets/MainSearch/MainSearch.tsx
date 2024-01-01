@@ -19,9 +19,9 @@ export default function MainSearch(): JSX.Element {
         <>
             <section className={"responsivenesss"}>
                 <div className={"grid grid-cols-3"}>
-                    <SearchBtn bg="#00b5ec" handleClick={(color) =>setColor(color)} />
-                    <SearchBtn bg="#0057a4" handleClick={(color) => setColor(color)} />
-                    <SearchBtn bg="#4cb847" handleClick={(color) =>setColor(color)} />
+                    <SearchBtn bg="#00b5ec" handleClick={(color:string) =>setColor(color)} />
+                    <SearchBtn bg="#0057a4" handleClick={(color:string) => setColor(color)} />
+                    <SearchBtn bg="#4cb847" handleClick={(color:string) =>setColor(color)} />
                 </div>
                 <SearchInputContext bg={bg} />
             </section>

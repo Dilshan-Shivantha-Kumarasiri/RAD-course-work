@@ -1,10 +1,13 @@
-// @ts-ignore
-export default function SearchBtn(props): JSX.Element {
+interface Props {
+    bg:string
+    handleClick:any
+}
+
+export default function SearchBtn(props:Props): JSX.Element {
 
     const style = {
         backgroundColor:props.bg //background color
     }
-
 
     return(
         <>
