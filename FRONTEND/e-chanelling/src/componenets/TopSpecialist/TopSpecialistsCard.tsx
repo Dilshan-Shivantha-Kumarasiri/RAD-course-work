@@ -1,4 +1,4 @@
-import Cards from "./Card.tsx";
+import Cards from "../Component/Card.tsx";
 
 export default function TopSpecialistsCard(): JSX.Element {
     return(

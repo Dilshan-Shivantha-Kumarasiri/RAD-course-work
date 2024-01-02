@@ -1,7 +1,13 @@
 import {Card} from "flowbite-react";
 import type {CustomFlowbiteTheme} from 'flowbite-react';
 
-export default function Cards(props): JSX.Element {
+interface Props{
+    doctorSpecial:string,
+    note : string
+    image:string
+}
+
+export default function Cards(props: Props): JSX.Element {
 
     const customTheme: CustomFlowbiteTheme['card'] = {
         "root": {
