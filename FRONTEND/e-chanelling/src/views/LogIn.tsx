@@ -1,11 +1,24 @@
 import TextFieldTwo from "../componenets/Input/textField/TextFieldTwo.tsx";
+import {useForm , Controller, SubmitHandler} from "react-hook-form";
 
 export default function LogIn(): JSX.Element {
 
-    return (
+    interface IFormInput {
+        loginEmail: string
+        loginPassword: string
+    }
 
+
+    const {control,handleSubmit} =useForm<IFormInput>({defaultValues:{loginEmail:"",loginPassword:""}})
+
+    console.log("render")
+    const onSubmit: SubmitHandler<any> = (data) => console.log(data)
+
+    // console.log(watch(["loginEmail","loginPassword"]))
+
+    return (
         <>
-            <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+            <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 main-font">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                     <img className="mx-auto h-10 w-auto"
                          src="https://usebootstrap.com/preview-no-frame/mediplus-lite/img/logo.png" alt="Your Company" />
@@ -14,8 +27,16 @@ export default function LogIn(): JSX.Element {
                 </div>
 
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                    <form className="space-y-6" action="#" method="POST">
-                        <TextFieldTwo id={"email"} type={"email"} autoComplete={"email"} required={true} isLableHave={true} lableName={"User email"}/>
+                    <form className="space-y-6" action="#" method="POST " onSubmit={handleSubmit(onSubmit)}>
+                        <Controller
+                            name="loginPassword"
+                            control={control}
+                            render={({ field }) => {
+                                console.log(field)
+                              return  <TextFieldTwo id={"email"} type={"email"} autoComplete={"email"} required={true} islablehave={"true"} lablename={"User email"}  {...field} />}
+
+                        }/>
+
                         <div>
                             <div className="flex items-center justify-between">
                                 <label htmlFor="password"
@@ -26,7 +47,10 @@ export default function LogIn(): JSX.Element {
                                 </div>
                             </div>
                             <div className="mt-2">
-                                <TextFieldTwo required={true} type={"password"} id={"password"} isLableHave={false} lableName={"User email"}/>
+                                <Controller
+                                    name="loginEmail"
+                                    control={control}
+                                    render={({ field }) => <TextFieldTwo   {...field} />}/>
                             </div>
                         </div>
 
@@ -46,6 +70,5 @@ export default function LogIn(): JSX.Element {
                 </div>
             </div>
         </>
-
     )
 }
