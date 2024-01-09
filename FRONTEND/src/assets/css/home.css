@@ -3,3 +3,14 @@
 @tailwind utilities;
 
 
+
+
+@layer components {
+    .secondary-font-color {
+        color: #1a8efd;
+    }
+}
+
+.navigation-links a{
+    font-family: rubik,serif;
+}
