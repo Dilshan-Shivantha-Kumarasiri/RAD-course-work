@@ -94,7 +94,8 @@ export default function Home(): React.JSX.Element {
                 <div className={"min-w-[400px] relative border-2 rounded-3xl flex flex-col items-center flex-1 p-5"}>
                     {/* emergency care */}
                     <div className={"rounded-full bg-[#dce6ff] absolute p-2 top-[-20px] what-we-do-icon"}>
-                        <svg color={"#1a8efd"} width={"30px"} height={"30px"} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="truck-medical"
+                        <svg color={"#1a8efd"} width={"30px"} height={"30px"} aria-hidden="true" focusable="false"
+                             data-prefix="fas" data-icon="truck-medical"
                              className="svg-inline--fa fa-truck-medical info-fa-icon" role="img"
                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                             <path fill="currentColor"
@@ -111,7 +112,8 @@ export default function Home(): React.JSX.Element {
                 <div className={"min-w-[400px] relative border-2 rounded-3xl flex flex-col items-center flex-1 p-5"}>
                     {/* Heart Disease */}
                     <div className={"rounded-full bg-[#dce6ff] absolute p-2 top-[-20px]"}>
-                        <svg color={"#1a8efd"} width={"30px"} height={"30px"} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart-pulse"
+                        <svg color={"#1a8efd"} width={"30px"} height={"30px"} aria-hidden="true" focusable="false"
+                             data-prefix="fas" data-icon="heart-pulse"
                              className="svg-inline--fa fa-heart-pulse info-fa-icon" role="img"
                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path fill="currentColor"
@@ -128,7 +130,8 @@ export default function Home(): React.JSX.Element {
                 <div className={"min-w-[400px] relative border-2 rounded-3xl flex flex-col items-center flex-1 p-5"}>
                     {/* Dental care */}
                     <div className={"rounded-full bg-[#dce6ff]  absolute p-2 top-[-20px]"}>
-                        <svg color={"#1a8efd"} width={"30px"} height={"30px"} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tooth"
+                        <svg color={"#1a8efd"} width={"30px"} height={"30px"} aria-hidden="true" focusable="false"
+                             data-prefix="fas" data-icon="tooth"
                              className="svg-inline--fa fa-tooth info-fa-icon" role="img"
                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
@@ -139,6 +142,76 @@ export default function Home(): React.JSX.Element {
                     <p className={"text-center"}>Smile with confidence as our Dental Care services cater to all your
                         oral health needs. Our skilled dentists provide a wide range of treatments, from routine
                         check-ups and cleanings to cosmetic procedures and restorative treatments.</p>
+                </div>
+            </section>
+
+            {/* why choose health section */}
+            <section className={"flex items-center justify-center px-10 mt-20"}>
+                <div className={"flex-1"}>
+                    <img
+                        src="https://alkaison.github.io/Health-Plus/static/media/doctor-book-appointment.edb3f4ac282ff3fefaec.png"
+                        alt=""/>
+                </div>
+                <div className={"flex-1"}>
+                    <div className={"relative why-choose-health-container"}>
+                        <h4 className={" text-[40px] font-medium why-choose-health"}>Why Choose Health</h4>
+                    </div>
+                    <p className={"my-5 font-[Rubik] text-[18px] text-[#4d4b4b]"}>Discover the reasons to choose Health Plus for your healthcare needs. Experience expert care,
+                        convenience, and personalized solutions, making your well-being our top priority. Join us on a
+                        journey to better health and a happier life.</p>
+                    <ul>
+                        <li className={"align-middle my-4 text-[22px] font-[Rubik] font-medium"}>
+                            <svg width={"20px"} aria-hidden="true" focusable="false" data-prefix="fas"
+                                 data-icon="circle-check"
+                                 className="inline-block svg-inline--fa fa-circle-check mr-2 " role="img"
+                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                 style={{color: "rgb(30, 143, 253)"}}>
+                                <path fill="currentColor"
+                                      d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                            </svg>
+
+                            Best Professional Doctors
+
+                        </li>
+                        <li className={"align-middle my-4 text-[22px] font-[Rubik] font-medium"}>
+                            <svg width={"20px"} aria-hidden="true" focusable="false" data-prefix="fas"
+                                 data-icon="circle-check"
+                                 className="inline-block svg-inline--fa fa-circle-check mr-2 " role="img"
+                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                 style={{color: "rgb(30, 143, 253)"}}>
+                                <path fill="currentColor"
+                                      d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                            </svg>
+
+                            Emergency Care
+                        </li>
+
+                        <li className={"align-middle my-4 text-[22px] font-[Rubik] font-medium"}>
+                            <svg width={"20px"} aria-hidden="true" focusable="false" data-prefix="fas"
+                                 data-icon="circle-check"
+                                 className="inline-block svg-inline--fa fa-circle-check mr-2 " role="img"
+                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                 style={{color: "rgb(30, 143, 253)"}}>
+                                <path fill="currentColor"
+                                      d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                            </svg>
+
+                            24/7 Support Live Chat
+                        </li>
+
+                        <li className={"align-middle my-4 text-[22px] font-[Rubik] font-medium "}>
+                            <svg width={"20px"} aria-hidden="true" focusable="false" data-prefix="fas"
+                                 data-icon="circle-check"
+                                 className="inline-block svg-inline--fa fa-circle-check mr-2 " role="img"
+                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                 style={{color: "rgb(30, 143, 253)"}}>
+                                <path fill="currentColor"
+                                      d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                            </svg>
+
+                            Enrollment Easy and Quick
+                        </li>
+                    </ul>
                 </div>
             </section>
 
