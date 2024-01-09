@@ -4,6 +4,12 @@ import Footer from "../components/Layouts/Footer.tsx";
 import "../assets/css/home.css"
 
 export default function Home(): React.JSX.Element {
+    /*
+     * creating state for change the review when click the button
+     * need to create the review object and push in to the array
+    */
+
+
 
     return (
         <>
@@ -157,7 +163,8 @@ export default function Home(): React.JSX.Element {
                     <div className={"relative why-choose-health-container"}>
                         <h4 className={" text-[40px] font-medium why-choose-health"}>Why Choose Health</h4>
                     </div>
-                    <p className={"my-5 font-[Rubik] text-[18px] text-[#4d4b4b]"}>Discover the reasons to choose Health Plus for your healthcare needs. Experience expert care,
+                    <p className={"my-5 font-[Rubik] text-[18px] text-[#4d4b4b]"}>Discover the reasons to choose Health
+                        Plus for your healthcare needs. Experience expert care,
                         convenience, and personalized solutions, making your well-being our top priority. Join us on a
                         journey to better health and a happier life.</p>
                     <ul>
@@ -226,6 +233,33 @@ export default function Home(): React.JSX.Element {
                             </svg>
                             <p>Book Appointment</p>
                         </button>
+                    </div>
+                </div>
+            </section>
+
+            {/* review section */}
+            <section className={"px-10 bg-[] customer-review-container py-5"}>
+                <div>
+                    <p className={"font-[Rubik] text-[32px] text-[#6f7074] font-medium"}>More over <span
+                        className={"secondary-font-color"}>1500+ Customers</span></p>
+                    <p className={"text-[36px] font-medium font-[Rubik]"}>Don't believe us, Check clients word</p>
+                    <div className={"relative text-[24px] font-[Rubik] py-10"}>
+                        <div className={"p-5"}>
+                            <p className={"customer-review"}>The convenience of accessing medical notes online was
+                                fantastic. Health Plus made managing my
+                                health records hassle-free! Best Healthcare services.</p>
+                        </div>
+                    </div>
+                    <div className={"flex justify-between items-center"}>
+                        <div>
+                            <p className={"text-[24px] font-[Poppins] font-medium"}>Sarah Johnson</p>
+                            <p className={"text-[#6f7074] text-[18px] font-medium"}>Florida, USA</p>
+                        </div>
+                        {/* reviews controllers */}
+                        <div className={"review-controllers-container"}>
+                            <button className={"text-[50px] hover:secondary-font-color"}>←</button>
+                            <button className={"text-[50px] hover:secondary-font-color"}>→</button>
+                        </div>
                     </div>
                 </div>
             </section>
