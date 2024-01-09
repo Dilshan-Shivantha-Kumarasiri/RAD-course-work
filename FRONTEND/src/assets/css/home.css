@@ -51,3 +51,32 @@
     bottom: -5px;
     left: 0;
 }
+
+/* customer review section */
+.customer-review-container{
+    background: linear-gradient(90deg,#ecf2ff,#fbfcff);
+}
+
+.customer-review::before{
+    content: "\201C";
+    /*background-color: red;*/
+    /*width: 100px;*/
+    height: 100px;
+    position: absolute;
+    font-size: 40px;
+    color: #178bff;
+    left: 0;
+    top: 0;
+}
+
+.customer-review::after{
+    content: "\201D";
+    /*background-color: red;*/
+    /*width: 100px;*/
+    height: 100px;
+    position: absolute;
+    font-size: 40px;
+    color: #178bff;
+    right: 0;
+    /*bottom: 0;*/
+}
