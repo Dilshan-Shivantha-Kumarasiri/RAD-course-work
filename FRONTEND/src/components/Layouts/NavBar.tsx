@@ -4,7 +4,7 @@ import React from "react";
 export default function NavBar(): React.JSX.Element {
     return (
         <>
-            <nav className={"flex justify-between px-10 items-center"}>
+            <nav className={"flex justify-between px-10 items-center py-3"}>
                 <div>
                     {/* main company logo/text */}
                     <a className={"text-[32px] secondary-font-color font-medium"} href={"#"}>Health <span className={"text-[40px] text-[#54de54]"}>+</span></a>
