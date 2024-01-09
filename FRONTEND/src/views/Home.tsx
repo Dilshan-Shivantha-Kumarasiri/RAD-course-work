@@ -212,6 +212,20 @@ export default function Home(): React.JSX.Element {
                             Enrollment Easy and Quick
                         </li>
                     </ul>
+                    <div>
+                        <button
+                            className={"group duration-500 bg-[#1a8efd] gap-x-2 hover:border-[#1a8efd] hover:bg-white hover:text-[#1a8efd] border-2 border-[white] items-center text-white flex py-3 px-4 rounded-3xl"}>
+                            <svg width={"14px"} aria-hidden="true" focusable="false" data-prefix="fas"
+                                 data-icon="calendar-check"
+                                 className="svg-inline--fa fa-calendar-check group-hover:fill-amber-500 "
+                                 role="img"
+                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                      d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zM329 305c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-95 95-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L329 305z"></path>
+                            </svg>
+                            <p>Book Appointment</p>
+                        </button>
+                    </div>
                 </div>
             </section>
 
