@@ -13,7 +13,7 @@ export default function Selects(props: Props): JSX.Element {
             <Label htmlFor={props.id} value={props.lableValue} />
             <Select  >
                 <option>Doctors</option>
-                <option>Speciali</option>
+                <option>Specialist</option>
             </Select>
         </div>
     );

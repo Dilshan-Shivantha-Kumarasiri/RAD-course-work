@@ -7,9 +7,9 @@ function App(): JSX.Element {
 
   return (
     <>
-      {/*<Home />*/}
+      <Home />
       {/*<LogIn/>*/}
-      <Register/>
+      {/*<Register/>*/}
     </>
 
   )
