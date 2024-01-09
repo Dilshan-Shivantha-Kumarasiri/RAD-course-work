@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import NavBar from "../components/Layouts/NavBar.tsx";
 import Footer from "../components/Layouts/Footer.tsx";
+import "../assets/data/review.data.ts";
 import "../assets/css/home.css"
+import reviewData from "../assets/data/review.data.ts";
 
 export default function Home(): React.JSX.Element {
     /*
@@ -9,7 +11,35 @@ export default function Home(): React.JSX.Element {
      * need to create the review object and push in to the array
     */
 
+    // console.log(reviewData)
+    const customerReview:{customerReview:string , customerName:string , customerCountry:string, reviewCount:number}[] = reviewData;
 
+    console.log(customerReview[0])
+
+    const [reviews , setReviews] = useState(customerReview[0]);
+
+    function next(): void{
+
+        let reviewCount: number = reviews.reviewCount;
+
+        if (reviewCount === 2){
+            reviewCount = -1;
+        }
+         const review: {customerReview:string , customerName:string , customerCountry:string, reviewCount:number} =
+             customerReview[reviewCount+1];
+         setReviews(review)
+
+    }
+
+    function prev(): void{
+        let reviewCount: number = reviews.reviewCount;
+        if (reviewCount === 0){
+            reviewCount = 3;
+        }
+        const review: {customerReview:string , customerName:string , customerCountry:string, reviewCount:number} =
+            customerReview[reviewCount-1];
+        setReviews(review)
+    }
 
     return (
         <>
@@ -245,20 +275,18 @@ export default function Home(): React.JSX.Element {
                     <p className={"text-[36px] font-medium font-[Rubik]"}>Don't believe us, Check clients word</p>
                     <div className={"relative text-[24px] font-[Rubik] py-10"}>
                         <div className={"p-5"}>
-                            <p className={"customer-review"}>The convenience of accessing medical notes online was
-                                fantastic. Health Plus made managing my
-                                health records hassle-free! Best Healthcare services.</p>
+                            <p className={"customer-review"}>{reviews.customerReview}</p>
                         </div>
                     </div>
                     <div className={"flex justify-between items-center"}>
                         <div>
-                            <p className={"text-[24px] font-[Poppins] font-medium"}>Sarah Johnson</p>
-                            <p className={"text-[#6f7074] text-[18px] font-medium"}>Florida, USA</p>
+                            <p className={"text-[24px] font-[Poppins] font-medium"}>{reviews.customerName}</p>
+                            <p className={"text-[#6f7074] text-[18px] font-medium"}>{reviews.customerCountry}</p>
                         </div>
                         {/* reviews controllers */}
                         <div className={"review-controllers-container"}>
-                            <button className={"text-[50px] hover:secondary-font-color"}>←</button>
-                            <button className={"text-[50px] hover:secondary-font-color"}>→</button>
+                            <button className={"text-[50px] hover:secondary-font-color"} onClick={prev}>←</button>
+                            <button className={"text-[50px] hover:secondary-font-color"} onClick={next}>→</button>
                         </div>
                     </div>
                 </div>
