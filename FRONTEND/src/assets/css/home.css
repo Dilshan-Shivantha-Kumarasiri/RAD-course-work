@@ -35,3 +35,19 @@
 .what-we-do-icon{
 
 }
+
+/* why choose health section */
+
+.why-choose-health-container{
+    width: fit-content;
+}
+
+.why-choose-health::after{
+    content: "";
+    height: 5px;
+    background-color: #9d2553;
+    width: calc(100% - 50px);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
