@@ -10,29 +10,48 @@ export default function Home(): React.JSX.Element {
      * creating state for change the review when click the button
      * need to create the review object and push in to the array
     */
+    interface customerReview{
+        customerReview:string
+        customerName:string
+        customerCountry:string
+        reviewCount:number
+    }
 
     // console.log(reviewData)
     const customerReview:{customerReview:string , customerName:string , customerCountry:string, reviewCount:number}[] = reviewData;
 
     console.log(customerReview[0])
 
-    const [reviews , setReviews] = useState(customerReview[0]);
+    const [reviews , setReviews] = useState<customerReview>(customerReview[0]);
 
+    /*
+     * when click the next button calling the below next function
+     * when click the function dynamically render the customer review data and set that value to the state
+    */
     function next(): void{
-
+        /*
+        * - apply the conditional checking for avoid the error that happening reading the index that does not
+        *   include in the array
+       */
         let reviewCount: number = reviews.reviewCount;
-
         if (reviewCount === 2){
             reviewCount = -1;
         }
          const review: {customerReview:string , customerName:string , customerCountry:string, reviewCount:number} =
              customerReview[reviewCount+1];
          setReviews(review)
-
     }
 
+    /*
+     * when click the prev button calling the below prev function
+     * when click the function dynamically render the customer review data and set that value to the state
+    */
     function prev(): void{
         let reviewCount: number = reviews.reviewCount;
+        /*
+         * - apply the conditional checking for avoid the error that happening reading the index that does not
+         *   include in the array
+        */
         if (reviewCount === 0){
             reviewCount = 3;
         }
@@ -275,11 +294,13 @@ export default function Home(): React.JSX.Element {
                     <p className={"text-[36px] font-medium font-[Rubik]"}>Don't believe us, Check clients word</p>
                     <div className={"relative text-[24px] font-[Rubik] py-10"}>
                         <div className={"p-5"}>
+                            {/* render the customer review according to the state value */}
                             <p className={"customer-review"}>{reviews.customerReview}</p>
                         </div>
                     </div>
                     <div className={"flex justify-between items-center"}>
                         <div>
+                            {/* render the customer name and customer country according to the state value who write the review and their country */}
                             <p className={"text-[24px] font-[Poppins] font-medium"}>{reviews.customerName}</p>
                             <p className={"text-[#6f7074] text-[18px] font-medium"}>{reviews.customerCountry}</p>
                         </div>
