@@ -19,3 +19,15 @@
 .hero-container{
     background: linear-gradient(206deg,#ecf2ff,#fbfcff);
 }
+
+
+/* what we do section */
+.what-we-do-header::after{
+    content: "";
+    height: 5px;
+    background-color: #9d2553;
+    width: calc(100% - 50px);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
