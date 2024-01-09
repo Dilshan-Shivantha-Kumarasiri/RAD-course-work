@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../components/Layouts/NavBar.tsx";
+import Footer from "../components/Layouts/Footer.tsx";
 import "../assets/css/home.css"
 
 export default function Home(): React.JSX.Element {
@@ -229,6 +230,8 @@ export default function Home(): React.JSX.Element {
                 </div>
             </section>
 
+            {/* footer component */}
+            <Footer/>
         </>
     );
 }
