@@ -12,11 +12,11 @@ export default function NavBar(): React.JSX.Element {
                 <div>
                     {/* main navigation menu */}
                     <ul className={"navigation-links flex items-center"}>
-                        <li className={"mx-[1.5vw] lg:mx-[10px] text-[18px] hover:secondary-font-color"}><a href="#">Home</a></li>
-                        <li className={"mx-[1.5vw] lg:mx-[10px] text-[18px] hover:secondary-font-color"}><a href="#">Services</a></li>
-                        <li className={"mx-[1.5vw] lg:mx-[10px] text-[18px] hover:secondary-font-color"}><a href="#">About</a></li>
-                        <li className={"mx-[1.5vw] lg:mx-[10px] text-[18px] hover:secondary-font-color"}><a href="#">Reviews</a></li>
-                        <li className={"mx-[1.5vw] lg:mx-[10px] text-[18px] hover:secondary-font-color"}><a href="#">Doctors</a></li>
+                        <li className={"mx-[1.5vw] lg:mx-[18px] text-[18px] hover:secondary-font-color"}><a href="#">Home</a></li>
+                        <li className={"mx-[1.5vw] lg:mx-[18px] text-[18px] hover:secondary-font-color"}><a href="#">Services</a></li>
+                        <li className={"mx-[1.5vw] lg:mx-[18px] text-[18px] hover:secondary-font-color"}><a href="#">About</a></li>
+                        <li className={"mx-[1.5vw] lg:mx-[18px] text-[18px] hover:secondary-font-color"}><a href="#">Reviews</a></li>
+                        <li className={"mx-[1.5vw] lg:mx-[18px] text-[18px] hover:secondary-font-color"}><a href="#">Doctors</a></li>
                     </ul>
                 </div>
                 <div>
