@@ -14,3 +14,8 @@
 .navigation-links a{
     font-family: rubik,serif;
 }
+
+/* adding css to the hero container */
+.hero-container{
+    background: linear-gradient(206deg,#ecf2ff,#fbfcff);
+}
