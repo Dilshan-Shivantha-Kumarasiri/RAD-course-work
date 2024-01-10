@@ -5,8 +5,12 @@ import "../assets/css/style.css"
 export default function SignIn(): React.JSX.Element {
     return (
         <>
-            <section className={"h-full bg-white"}>
-
+            <section className={" relative h-full bg-white"}>
+                <div>
+                    <a href="#">
+                        <p className={"absolute text-gray-500 font-medium p-5 hover:secondary-font-color"}>Back to home</p>
+                    </a>
+                </div>
                 <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
                     <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                         <div className={"flex justify-center"}>
