@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import NavBar from "../components/Layouts/NavBar.tsx";
 import Footer from "../components/Layouts/Footer.tsx";
 import "../assets/data/review.data.ts";
-import "../assets/css/home.css"
+import "../assets/css/style.css"
 import reviewData from "../assets/data/review.data.ts";
 
 export default function Home(): React.JSX.Element {
