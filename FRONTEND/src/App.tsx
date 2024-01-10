@@ -2,6 +2,7 @@ import Home from "./views/Home.tsx";
 import SignIn from "./views/SignIn.tsx";
 import SignUp from "./views/SignUp.tsx";
 import "./App.css"
+import "/src/assets/css/style.css"
 import SearchDoctors from "./views/SearchDoctors.tsx";
 
 
