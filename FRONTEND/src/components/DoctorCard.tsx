@@ -1,6 +1,9 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
 
 export default function DoctorCard():React.JSX.Element{
+    const navigate = useNavigate();
+
     return(
         <>
             <div className={"w-full px-5 doctor-card flex justify-between"}>
@@ -15,7 +18,8 @@ export default function DoctorCard():React.JSX.Element{
                 </div>
                 <div className={"flex flex-col gap-2 justify-center"}>
                     <button className={" duration-300 hover:text-white hover:bg-[#1a8efd] p-1 border-[2px] border-[#1a8efd]"}> View Profile </button>
-                    <button className={" duration-300 hover:text-black hover:bg-white p-1 border-[2px] border-[#1a8efd] text-white bg-[#1a8efd]"}> Book Now </button>
+
+                    <button onClick={ () => navigate("/sessions/", {state:{}})} className={" duration-300 hover:text-black hover:bg-white p-1 border-[2px] border-[#1a8efd] text-white bg-[#1a8efd]"}> Book Now </button>
                 </div>
             </div>
         </>
