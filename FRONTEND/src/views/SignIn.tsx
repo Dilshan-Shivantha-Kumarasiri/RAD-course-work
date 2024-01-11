@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/css/style.css"
+import {Link} from "react-router-dom";
 
 
 export default function SignIn(): React.JSX.Element {
@@ -7,9 +8,10 @@ export default function SignIn(): React.JSX.Element {
         <>
             <section className={" relative h-full bg-white"}>
                 <div>
-                    <a href="#">
-                        <p className={"absolute text-gray-500 font-medium p-5 hover:secondary-font-color"}>Back to home</p>
-                    </a>
+                    <Link to={"/"}>
+                        <p className={"absolute text-gray-500 font-medium p-5 hover:secondary-font-color"}>Back to
+                            home</p>
+                    </Link>
                 </div>
                 <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
                     <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -54,10 +56,12 @@ export default function SignIn(): React.JSX.Element {
                                         className="flex w-full justify-center rounded-md bg-[#1a8efd] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#067bea] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign
                                     in
                                 </button>
-                                <button type="submit"
-                                        className="border mt-5 flex w-full justify-center rounded-md bg-white px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign
-                                    up
-                                </button>
+                                <Link to={"/signup/"}>
+                                    <button type="submit"
+                                            className="border mt-5 flex w-full justify-center rounded-md bg-white px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign
+                                        up
+                                    </button>
+                                </Link>
                             </div>
                         </form>
                     </div>

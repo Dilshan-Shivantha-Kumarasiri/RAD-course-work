@@ -30,12 +30,12 @@ export default function NavBar(): React.JSX.Element {
                 </div>
                 <div>
                     {/* user sign in area */}
-                    <a href="#" className={""}>
+                    <Link to={"/signin/"}>
                         <button
                             className={"duration-300 sing-in-btn  hover:text-[#1a8efd] hover:bg-white border-2 hover:border-[#1a8efd] border-[white] px-5 py-2 rounded-3xl bg-[#1a8efd] text-white"}>
                             Sign in
                         </button>
-                    </a>
+                    </Link>
                 </div>
             </nav>
         </>
