@@ -3,11 +3,16 @@ import NavBar from "../components/Layouts/NavBar.tsx";
 import Footer from "../components/Layouts/Footer.tsx";
 import CustomTextInput from "../components/inputs/CustomTextInput.tsx";
 import CustomSelect from "../components/inputs/CustomSelect.tsx";
-import {Button} from "flowbite-react";
+import {Breadcrumb, Button} from "flowbite-react";
 import DoctorCard from "../components/DoctorCard.tsx";
 import CustomPagination from "../components/CustomPagination.tsx";
+import {HiHome} from "react-icons/hi";
+import {useNavigate} from "react-router-dom";
 
 export default function SearchDoctors(): React.JSX.Element {
+
+    const navigate = useNavigate();
+
     /* the options of the select input */
     const selectOptions:{options:string,values:string}[] = [
         {options:"Doctors",values:"Doctors"},
@@ -46,6 +51,15 @@ export default function SearchDoctors(): React.JSX.Element {
                             <div>
                                 <p className={"font-medium text-gray-600 text-[15px]"}><span>1</span> Result found</p>
                             </div>
+                        </div>
+
+                        <div className={"mt-5"}>
+                            <Breadcrumb className={"dark:text-red-500"} aria-label="Default breadcrumb example">
+                                <Breadcrumb.Item onClick={() => navigate("/")} icon={HiHome}>
+                                    Home
+                                </Breadcrumb.Item>
+                                <Breadcrumb.Item >Doctors</Breadcrumb.Item>
+                            </Breadcrumb>
                         </div>
 
                     {/*  card  */}
