@@ -5,6 +5,7 @@ import SearchDoctors from "./views/SearchDoctors.tsx";
 import "./App.css"
 import "/src/assets/css/style.css"
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Sessions from "./views/Sessions.tsx";
 
 
 
@@ -19,9 +20,9 @@ function App() {
                 <Route path="/signin" element={<SignIn />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/find/doctors/" element={<SearchDoctors />} />
+                <Route path={"/sessions/"} element={<Sessions/>}/>
             </Routes>
         </BrowserRouter>
-      {/*<SearchDoctors/>*/}
     </>
   )
 }
