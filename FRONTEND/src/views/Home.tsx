@@ -4,59 +4,65 @@ import Footer from "../components/Layouts/Footer.tsx";
 import "../assets/data/review.data.ts";
 import "../assets/css/style.css"
 import reviewData from "../assets/data/review.data.ts";
+import {Link} from "react-router-dom";
 
 export default function Home(): React.JSX.Element {
     /*
      * creating state for change the review when click the button
      * need to create the review object and push in to the array
     */
-    interface customerReview{
-        customerReview:string
-        customerName:string
-        customerCountry:string
-        reviewCount:number
+    interface customerReview {
+        customerReview: string
+        customerName: string
+        customerCountry: string
+        reviewCount: number
     }
 
     // console.log(reviewData)
-    const customerReview:{customerReview:string , customerName:string , customerCountry:string, reviewCount:number}[] = reviewData;
+    const customerReview: {
+        customerReview: string,
+        customerName: string,
+        customerCountry: string,
+        reviewCount: number
+    }[] = reviewData;
 
     console.log(customerReview[0])
 
-    const [reviews , setReviews] = useState<customerReview>(customerReview[0]);
+    const [reviews, setReviews] = useState<customerReview>(customerReview[0]);
 
     /*
      * when click the next button calling the below next function
      * when click the function dynamically render the customer review data and set that value to the state
     */
-    function next(): void{
+    function next(): void {
         /*
         * - apply the conditional checking for avoid the error that happening reading the index that does not
         *   include in the array
        */
         let reviewCount: number = reviews.reviewCount;
-        if (reviewCount === 2){
+        if (reviewCount === 2) {
             reviewCount = -1;
         }
-         const review: {customerReview:string , customerName:string , customerCountry:string, reviewCount:number} =
-             customerReview[reviewCount+1];
-         setReviews(review)
+        const review: { customerReview: string, customerName: string, customerCountry: string, reviewCount: number } =
+            customerReview[reviewCount + 1];
+        setReviews(review)
     }
 
     /*
      * when click the prev button calling the below prev function
      * when click the function dynamically render the customer review data and set that value to the state
     */
-    function prev(): void{
+    function prev(): void {
         let reviewCount: number = reviews.reviewCount;
         /*
          * - apply the conditional checking for avoid the error that happening reading the index that does not
          *   include in the array
         */
-        if (reviewCount === 0){
+        if (reviewCount === 0) {
             reviewCount = 3;
         }
-        const review: {customerReview:string , customerName:string , customerCountry:string, reviewCount:number} =
-            customerReview[reviewCount-1];
+        const review: { customerReview: string, customerName: string, customerCountry: string, reviewCount: number } =
+            customerReview[reviewCount - 1];
         setReviews(review)
     }
 
@@ -87,18 +93,22 @@ export default function Home(): React.JSX.Element {
                             </p>
                         </div>
                         <div>
-                            <button
-                                className={"group duration-500 bg-[#1a8efd] gap-x-2 hover:border-[#1a8efd] hover:bg-white hover:text-[#1a8efd] border-2 border-[white] items-center text-white flex py-3 px-4 rounded-3xl"}>
-                                <svg width={"14px"} aria-hidden="true" focusable="false" data-prefix="fas"
-                                     data-icon="calendar-check"
-                                     className="svg-inline--fa fa-calendar-check group-hover:fill-amber-500 "
-                                     role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path fill="currentColor"
-                                          d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zM329 305c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-95 95-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L329 305z"></path>
-                                </svg>
-                                <p>Book Appointment</p>
-                            </button>
+                            <Link to={"/find/doctors/"}>
+                                <button
+                                    className={"group duration-500 bg-[#1a8efd] gap-x-2 hover:border-[#1a8efd] hover:bg-white hover:text-[#1a8efd] border-2 border-[white] items-center text-white flex py-3 px-4 rounded-3xl"}>
+                                    <svg width={"14px"} aria-hidden="true" focusable="false" data-prefix="fas"
+                                         data-icon="calendar-check"
+                                         className="svg-inline--fa fa-calendar-check group-hover:fill-amber-500 "
+                                         role="img"
+                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor"
+                                              d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zM329 305c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-95 95-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L329 305z"></path>
+                                    </svg>
+                                    <p>Book Appointment</p>
+
+
+                                </button>
+                            </Link>
                         </div>
 
                         <div className={"flex gap-x-10 "}>
@@ -270,18 +280,20 @@ export default function Home(): React.JSX.Element {
                         </li>
                     </ul>
                     <div>
-                        <button
-                            className={"group duration-500 bg-[#1a8efd] gap-x-2 hover:border-[#1a8efd] hover:bg-white hover:text-[#1a8efd] border-2 border-[white] items-center text-white flex py-3 px-4 rounded-3xl"}>
-                            <svg width={"14px"} aria-hidden="true" focusable="false" data-prefix="fas"
-                                 data-icon="calendar-check"
-                                 className="svg-inline--fa fa-calendar-check group-hover:fill-amber-500 "
-                                 role="img"
-                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path fill="currentColor"
-                                      d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zM329 305c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-95 95-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L329 305z"></path>
-                            </svg>
-                            <p>Book Appointment</p>
-                        </button>
+                        <Link to={"/find/doctors/"}>
+                            <button
+                                className={"group duration-500 bg-[#1a8efd] gap-x-2 hover:border-[#1a8efd] hover:bg-white hover:text-[#1a8efd] border-2 border-[white] items-center text-white flex py-3 px-4 rounded-3xl"}>
+                                <svg width={"14px"} aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="calendar-check"
+                                     className="svg-inline--fa fa-calendar-check group-hover:fill-amber-500 "
+                                     role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path fill="currentColor"
+                                          d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zM329 305c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-95 95-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L329 305z"></path>
+                                </svg>
+                                <p>Book Appointment</p>
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </section>

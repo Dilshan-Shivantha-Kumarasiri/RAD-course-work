@@ -4,6 +4,8 @@ import Footer from "../components/Layouts/Footer.tsx";
 import CustomTextInput from "../components/inputs/CustomTextInput.tsx";
 import CustomSelect from "../components/inputs/CustomSelect.tsx";
 import {Button} from "flowbite-react";
+import DoctorCard from "../components/DoctorCard.tsx";
+import CustomPagination from "../components/CustomPagination.tsx";
 
 export default function SearchDoctors(): React.JSX.Element {
     /* the options of the select input */
@@ -34,8 +36,38 @@ export default function SearchDoctors(): React.JSX.Element {
                         </div>
                     </div>
                 </div>
-                <div className={""}>
+                <div className={"min-h-[500px] px-52 pt-10"}>
+                    <div className={"min-h-[500px]  border-gray-500"}>
+                        <div className={"flex justify-between"}>
+                            <div>
+                                <p className={"text-gray-600 font-medium"}>Search Result</p>
+                                <p className={"text-[12px]"}>All Doctors</p>
+                            </div>
+                            <div>
+                                <p className={"font-medium text-gray-600 text-[15px]"}><span>1</span> Result found</p>
+                            </div>
+                        </div>
 
+                    {/*  card  */}
+                        <div className={"mt-10"}>
+                            <div className={"my-5"}>
+                                <DoctorCard/>
+                            </div><div className={"my-5"}>
+                                <DoctorCard/>
+                            </div><div className={"my-5"}>
+                                <DoctorCard/>
+                            </div><div className={"my-5"}>
+                                <DoctorCard/>
+                            </div><div className={"my-5"}>
+                                <DoctorCard/>
+                            </div>
+                        </div>
+                        <div>
+                            {/* pagination */}
+                            {/*  need to apply use state and function  */}
+                            <CustomPagination/>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section>
