@@ -86,3 +86,9 @@
 .doctor-card{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
+
+.doctor-view-card-session{
+    background-image: linear-gradient(to bottom right,#2c67d8,#2badc2);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
