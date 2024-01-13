@@ -92,3 +92,11 @@
     background-image: linear-gradient(to bottom right,#2c67d8,#2badc2);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
+.card-bg{
+    background-image: linear-gradient(to bottom right,#2c67d8,#2badc2);
+}
+
+.payment-card{
+    background: linear-gradient(90deg,#2c67d8,#2badc2);
+}
