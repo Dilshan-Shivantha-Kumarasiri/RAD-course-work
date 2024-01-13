@@ -1,6 +1,9 @@
-
+import {useNavigate} from "react-router-dom";
 
 export default function SessionCard(): JSX.Element{
+
+    const navigate = useNavigate();
+
     return(
         <>
             <div className={"p-5 border"}>
@@ -32,7 +35,7 @@ export default function SessionCard(): JSX.Element{
                     <p className={"text-slate-600 font-bold text-[13px]"}>2800 + Booking fee</p>
                 </div>
                 <div className={"mt-4 w-full"}>
-                    <button className={"m-auto block w-full bg-blue-700 text-white py-1"} disabled={false}>Book Now</button>
+                    <button onClick={() => navigate("/book/appointment/")}  className={"m-auto block w-full bg-blue-700 text-white py-1"} disabled={false}>Book Now</button>
                 </div>
             </div>
 
