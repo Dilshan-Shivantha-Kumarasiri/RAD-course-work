@@ -42,7 +42,7 @@ export default function CustomTextInput(props: Props): React.JSX.Element{
         <>
             {
                 props.lableColor ? <Label theme={customThemeLabel} color={'black-text'}>{props.lableName}</Label> :
-                <Label theme={customThemeLabel} color={'black-white'}>{props.lableName}</Label>
+                <Label theme={customThemeLabel} color={'white-text'}>{props.lableName}</Label>
             }
             <TextInput placeholder-={"h2"} name={props.name} theme={customThemeTextInput} color={"main"}></TextInput>
         </>
