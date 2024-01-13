@@ -45,8 +45,8 @@ export default function CustomSelect(props:Props): React.JSX.Element{
             <div className="">
                 <div className="">
                     {
-                        props.lableColor? <Label color={"text-black"} theme={customThemeLabel} htmlFor={props.id} value={props.lableValue} />
-                        : <Label color={"text-white"} theme={customThemeLabel} htmlFor={props.id} value={props.lableValue} />
+                        props.lableColor? <Label color={"black-text"} theme={customThemeLabel} htmlFor={props.id} value={props.lableValue} />
+                        : <Label color={"white-text"} theme={customThemeLabel} htmlFor={props.id} value={props.lableValue} />
                     }
                 </div>
                 <Select theme={customTheme} id={props.id} required color={"colors"}>
