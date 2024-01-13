@@ -25,15 +25,15 @@ export default function SearchDoctors(): React.JSX.Element {
                 <NavBar/>
             </section>
             <section>
-                <div className={"px-52 w-full flex items-center  gap-x-7 bg-gradient-to-r from-cyan-500 to-blue-500 h-[100px]"}>
+                <div className={"px-52 w-full flex items-center  gap-x-7 card-bg h-[100px]"}>
                     <div className={"w-full flex items-center justify-center gap-x-7"}>
                         <div className={"flex-1"}>
                             {/* select type */}
-                            <CustomSelect lableValue={"Select type"} id={"selectDoctor"} options={selectOptions}/>
+                            <CustomSelect lableColor={false} lableValue={"Select type"} id={"selectDoctor"} options={selectOptions}/>
                         </div>
                         <div className={"flex-1"}>
                             {/* find doctor */}
-                            <CustomTextInput lableName={"Select doctor"}/>
+                            <CustomTextInput name={"text"} lableColor={false} lableName={"Select doctor"}/>
                         </div>
                         <div className={"self-end"}>
                             {/* searchBtn */}
