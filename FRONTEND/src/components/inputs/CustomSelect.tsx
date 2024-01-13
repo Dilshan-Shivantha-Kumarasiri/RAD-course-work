@@ -6,11 +6,21 @@ interface Props{
     options:{options:string,values:string}[]
     id:string
     lableValue:string
+    lableColor:boolean
 }
 
 export default function CustomSelect(props:Props): React.JSX.Element{
 
     const newOptions:JSX.Element[]= props.options.map((r:{options:string,values:string},index:number) => <option key={index} value={r.values}>{r.options}</option>)
+
+    const customThemeLabel : CustomFlowbiteTheme['label'] = {
+        "root":{
+            "colors":{
+                "white-text":"text-white",
+                "black-text":"text-black"
+            }
+        }
+    }
 
     const customTheme : CustomFlowbiteTheme['select'] ={
         "addon": "h-[5px]",
@@ -34,7 +44,10 @@ export default function CustomSelect(props:Props): React.JSX.Element{
         <>
             <div className="">
                 <div className="">
-                    <Label htmlFor={props.id} value={props.lableValue} />
+                    {
+                        props.lableColor? <Label color={"text-black"} theme={customThemeLabel} htmlFor={props.id} value={props.lableValue} />
+                        : <Label color={"text-white"} theme={customThemeLabel} htmlFor={props.id} value={props.lableValue} />
+                    }
                 </div>
                 <Select theme={customTheme} id={props.id} required color={"colors"}>
                     {/* use array of iteration for render the values */}
