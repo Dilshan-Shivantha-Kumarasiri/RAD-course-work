@@ -4,12 +4,24 @@ import type { CustomFlowbiteTheme } from 'flowbite-react';
 
 interface Props{
     lableName?:string
+    name:string
+    lableColor:boolean
+    placeHolder?:string
 }
 
 
 export default function CustomTextInput(props: Props): React.JSX.Element{
 
-    const customTheme : CustomFlowbiteTheme['textInput'] ={
+    const customThemeLabel : CustomFlowbiteTheme['label'] = {
+        "root":{
+            "colors":{
+                "white-text":"text-white",
+                "black-text":"text-black"
+            }
+        }
+    }
+
+    const customThemeTextInput : CustomFlowbiteTheme['textInput'] ={
         "addon": "h-[5px]",
         "field":{
             "input":{
@@ -19,7 +31,7 @@ export default function CustomTextInput(props: Props): React.JSX.Element{
                     "lgd": "sm:text-md p-4"
                 },
                 "colors":{
-                    "main":"bg-white focus:outline-none focus:ring-2 focus:ring-[#067bea]"
+                    "main":"bg-white focus:outline-none focus:ring-2 focus:ring-[#067bea] "
                 }
             }
         },
@@ -28,8 +40,11 @@ export default function CustomTextInput(props: Props): React.JSX.Element{
 
     return(
         <>
-            <Label>{props.lableName}</Label>
-            <TextInput  theme={customTheme} color={"main"}></TextInput>
+            {
+                props.lableColor ? <Label theme={customThemeLabel} color={'black-text'}>{props.lableName}</Label> :
+                <Label theme={customThemeLabel} color={'black-white'}>{props.lableName}</Label>
+            }
+            <TextInput placeholder-={"h2"} name={props.name} theme={customThemeTextInput} color={"main"}></TextInput>
         </>
     );
 }
