@@ -6,11 +6,11 @@ export default function NavBar(): React.JSX.Element {
 
     return (
         <>
-            <nav className={"flex justify-between px-10 items-center py-3"}>
+            <nav className={"flex justify-between px-10 items-center py-3 border-b"}>
                 <div>
                     {/* main company logo/text */}'
                     <Link to={"/"}>
-                        <a className={"text-[32px] secondary-font-color font-medium"} href={"#"}>Health <span
+                        <a className={"text-[32px] secondary-font-color font-medium"} href={"/"}>Health <span
                             className={"text-[40px] text-[#54de54]"}>+</span></a>
                     </Link>
                 </div>
