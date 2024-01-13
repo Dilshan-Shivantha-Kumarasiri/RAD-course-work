@@ -139,7 +139,6 @@ export default function Home(): React.JSX.Element {
                              src="https://alkaison.github.io/Health-Plus/static/media/doctor-picture.0261bb4efe7a9075c56a.png"
                              alt=""/>
                     </div>
-
                 </div>
             </main>
 
