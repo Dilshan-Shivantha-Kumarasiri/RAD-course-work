@@ -6,6 +6,7 @@ import "./App.css"
 import "/src/assets/css/style.css"
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Sessions from "./views/Sessions.tsx";
+import BookAppointment from "./views/BookAppointment.tsx";
 
 
 
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/find/doctors/" element={<SearchDoctors />} />
                 <Route path={"/sessions/"} element={<Sessions/>}/>
+                <Route path={"/book/appointment"} element={<BookAppointment/>}/>
             </Routes>
         </BrowserRouter>
     </>
