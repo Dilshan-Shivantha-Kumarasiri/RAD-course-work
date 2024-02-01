@@ -1,12 +1,13 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import UserContext from "../UserContext.tsx";
 
 
 export default function NavBar(): React.JSX.Element {
 
     return (
         <>
-            <nav className={"flex justify-between px-10 items-center py-3 border-b"}>
+            <nav className={"flex justify-between px-10 items-center py-3 border-b "}>
                 <div>
                     {/* main company logo/text */}'
                     <Link to={"/"}>
@@ -29,14 +30,15 @@ export default function NavBar(): React.JSX.Element {
                             href="#">Doctors</a></li>
                     </ul>
                 </div>
-                <div>
+                <div className={""}>
                     {/* user sign in area */}
-                    <Link to={"/signin/"}>
-                        <button
-                            className={"duration-300 sing-in-btn  hover:text-[#1a8efd] hover:bg-white border-2 hover:border-[#1a8efd] border-[white] px-5 py-2 rounded-3xl bg-[#1a8efd] text-white"}>
-                            Sign in
-                        </button>
-                    </Link>
+                    {/*<Link to={"/signin/"}>*/}
+                    {/*    <button*/}
+                    {/*        className={"duration-300 sing-in-btn  hover:text-[#1a8efd] hover:bg-white border-2 hover:border-[#1a8efd] border-[white] px-5 py-2 rounded-3xl bg-[#1a8efd] text-white"}>*/}
+                    {/*        Sign in*/}
+                    {/*    </button>*/}
+                    {/*</Link>*/}
+                    <UserContext/>
                 </div>
             </nav>
         </>
